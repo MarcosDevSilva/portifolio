@@ -68,16 +68,17 @@
 body{
     /*background-color: #282c34;*/
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #FFA500;
     margin: 0;
     padding: 0;
 }
-body.galeria{
+/*body.galeria{
     background-color: #282c34; 
-}
+}*/
 
 header {
-    background-color: #333;
+    /*background-color: #333;*/
+    background-image: url(https://i0.wp.com/4.bp.blogspot.com/-d1oVjal6FSo/UF5sHIoLyQI/AAAAAAAAGlU/9Z2y5DsiQIk/s1600/desbravador.jpg);
     color: #fff;
     text-align: center;
     padding: 1em 0;
@@ -86,7 +87,7 @@ header {
 .info {
     width: 80%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #F0E68C;
     padding: 20px;
     margin-top: 20px;
 }
@@ -94,12 +95,17 @@ header {
 h2 {
     color: #333;
     font-size: 1.5em;
+    margin-left: 5%;
+}
+h3 {
+    text-align: center; 
 }
 
 p {
     color: #666;
     font-size: 1.2em;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 div.galeria-modal{
@@ -183,6 +189,3 @@ div.galeria div.singlo-galeria img:hover{
 
 }
 
-h2{
-    margin-left: 5%;
-}
