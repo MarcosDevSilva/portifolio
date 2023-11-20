@@ -1,22 +1,43 @@
-function handleClick(){
-    document.getElementById("myNav").style.width ='30%'
-}
+document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+// const contentFiller = document.getElementById("content");
 
-function closeNav(){
-    document.getElementById("myNav").style.width ='0'
 
-}
+// for (i = 0; i <= 10; i += 1) {
+//     contentFiller.appendChild(document.createElement("p"));
+//     contentFiller.lastChild.innerHTML = 'Linha :' +i;
+// }
 
-const galeriaModal =document.querySelector(".galeria-modal")
-const imgGaleriaModal =document.querySelector(".galeria-modal img")
-
-function fecharGaleria(){
-    galeriaModal.style.visibility = "hidden";
-    imgGaleriaModal.style.transform = "scale(0)";
-}
-
-function abrirGaleria(src){
-    galeriaModal.style.visibility = "visible";
-    imgGaleriaModal.style.transform = "scale(1)";
-    imgGaleriaModal.src = src
-}
+document.addEventListener("DOMContentLoaded", function () {
+	const calendarTarget = document.getElementById("calendar");
+	const calendarPlugin = new FullCalendar.Calendar(calendarTarget, 
+		{
+			eventSources: 
+			[
+				{
+					events: [
+						{
+							title  : 'CASAMENTO CÉLIA',
+							start  : '2023-11-01'
+						},
+						{
+							title  : 'VIAGEM AO SÍTIO',
+							start  : '2023-11-05',
+							end    : '2023-11-08'
+						},
+						{
+							title  : 'ALMOÇO COM OS NOVATOS',
+							start  : '2023-11-09T12:30:00',
+							allDay : false // will make the time show
+						}
+					],
+						color: "red",
+						borderColor: "yellow",
+						textColor: "white",
+						backgroundColor: "rgb(0, 0, 0, 0.5)",
+						initialView: "dayGridMonth",
+						locale: "pt-br",
+				}
+			]
+	});
+	calendarPlugin.render();
+});
