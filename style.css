@@ -1,45 +1,102 @@
+:root {
+	--header-footerTextColor: rgb(255, 255, 255);
+	--textColor: rgb(243, 214, 0);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html,
 body {
-	margin: 0;
-	font-family: 'Urbanist', sans-serif;
-	overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #mainPageBackground {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-#header {
-	background-color: #333;
-	color: white;
-	padding: 10px;
-	position: fixed;
-	width: 100%;
-	z-index: 1000;
+#header, #footer {	
 	display: flex;
 	justify-content: space-around;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 2em;
+	background-color: rgb(255, 0, 0, 0.5);
+	color: var(--header-footerTextColor);
+	padding: 10px;
+	text-align: center;
+	z-index: 2;
+}
+
+#footer {
+	font-family: 'Urbanist', sans-serif;
+	font-size: 1.0em;
+}
+
+#leftSideFooter, 
+#rightSideFooter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50vw;
+	height: 10vh;
 }
 
 #content {
 	flex: 1;
-	overflow-y: scroll;
+	overflow-y: auto;
+	background-color: rgba(0, 0, 0, 0.6);
 	padding: 20px;
+	box-sizing: border-box;
+	position: relative;
+	color: var(--textColor);
+	z-index: 2;
 }
 
-#footer {
-	background-color: #333;
-	color: white;
-	padding: 10px;
+#content::-webkit-scrollbar {
+	display: none;
+}
+
+#mainPageBackground:before {
+	content: "";
+	width: 100vw;
+	height: 100vh;
+	background-image: url("/img/desbravadores_FULL.jpg");
+	filter: brightness(50%);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	bottom: 0;
-	width: 100%;
-	z-index: 1000;
-	display: flex;
-	justify-content: space-between;
+	z-index: 1;
 }
 
-#leftSideFooter,
-#rightSideFooter {
-	flex: 1;
+#header span,
+#footer p {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+#content {
+	max-height: 100%;
+	overflow-y: auto;
+}
+
+.hoverEffect:hover {
+	color: #ffcc00;
+	cursor: pointer;
 }
