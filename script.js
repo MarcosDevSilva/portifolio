@@ -1,22 +1,8 @@
-function handleClick(){
-    document.getElementById("myNav").style.width ='30%'
-}
+const contentFiller = document.getElementById("content");
+document.getElementById("currentYear").innerHTML = new Date().getFullYear();
 
-function closeNav(){
-    document.getElementById("myNav").style.width ='0'
 
-}
-
-const galeriaModal =document.querySelector(".galeria-modal")
-const imgGaleriaModal =document.querySelector(".galeria-modal img")
-
-function fecharGaleria(){
-    galeriaModal.style.visibility = "hidden";
-    imgGaleriaModal.style.transform = "scale(0)";
-}
-
-function abrirGaleria(src){
-    galeriaModal.style.visibility = "visible";
-    imgGaleriaModal.style.transform = "scale(1)";
-    imgGaleriaModal.src = src
+for (i = 0; i <= 60; i += 1) {
+    contentFiller.appendChild(document.createElement("p"));
+    contentFiller.lastChild.innerHTML = 'Linha :' +i;
 }

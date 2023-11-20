@@ -1,0 +1,88 @@
+:root {
+	--headerTextColor: rgb(243, 214, 0, 0.5);
+	--textColor: rgb(243, 214, 0);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+	overflow: hidden;
+}
+
+#mainPageBackground {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-image: url("/img/desbravadores_FULL.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: brightness(50%);
+}
+
+#header {
+	background-color: rgba(0,0,0,0.5);
+	color: var(--headerTextColor);
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 2em;
+	display: flex;
+	padding: 30px;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+	height: 10vh;
+	position: fixed;
+	z-index: 9999;
+}
+
+.hoverEffect:hover {
+	color: var(--textColor);
+	cursor: pointer;
+}
+
+#content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 200vh;
+	z-index: 1;
+	overflow-y: scroll;
+	position: relative;
+	border: 1px solid green;
+}
+
+.content-text {
+	border: 1px solid rgb(76, 0, 255);
+	font-family: 'Urbanist', sans-serif;
+	font-size: 1.5em;
+}
+
+#footer {
+	background-color: rgba(0,0,0,0.5);
+	color: var(--textColor);
+	font-family: 'Urbanist', sans-serif;
+	font-size: 1.0em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+	z-index: 9999;	
+}
+
+#leftSideFooter, 
+#rightSideFooter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50vw;
+	height: 10vh;
+}
