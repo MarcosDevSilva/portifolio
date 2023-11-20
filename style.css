@@ -29,10 +29,10 @@ a {
     flex-direction: column;
 }
 
-#header, #footer {	
+#header, #footer {
 	display: flex;
 	justify-content: space-around;
-	font-family: 'Bebas Neue', sans-serif;	
+	font-family: 'Bebas Neue', sans-serif;
 	font-size: 2em;
 	background-color: rgb(255, 0, 0, 0.5);
 	color: var(--header-footerTextColor);
@@ -47,7 +47,7 @@ a {
 	font-size: 1.0em;
 }
 
-#leftSideFooter, 
+#leftSideFooter,
 #rightSideFooter {
 	display: flex;
 	flex-direction: column;
@@ -74,20 +74,35 @@ a {
 	justify-content: center;
 }
 
-#calendar {
-	flex: 1;
-	overflow-y: auto;
-	background-color: rgba(0, 0, 0, 0.6);
-	padding: 20px;
-	box-sizing: border-box;
-	position: relative;
-	color: var(--textColor);
-	z-index: 2;
-	font-size: 12px;
-	display: flex;	
+#content {
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
 }
 
 #content::-webkit-scrollbar {
+	display: none;
+}
+
+
+#calendar {
+	flex: 1;
+	overflow-y: hidden;
+	background-color: rgba(0, 0, 0, 0.6);
+	/* padding: 10px; */
+	position: relative;
+	color: var(--textColor);
+	z-index: 2;
+	font-size: 1em;
+	/* display: flex; */
+}
+
+#calendar {
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+
+#calendar::-webkit-scrollbar {
 	display: none;
 }
 
@@ -123,4 +138,23 @@ a {
 .hoverEffect:hover {
 	color: #ffcc00;
 	cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+	#header,
+	#footer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#leftSideFooter,
+	#rightSideFooter {
+		width: 100%;
+	}
+
+	#content,
+	#calendar {
+		font-size: 3em;
+	}
 }
