@@ -72,11 +72,9 @@ a {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-}
-
-#content {
-  scrollbar-width: none;  /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+	max-height: 100%;
+	scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
 }
 
 #content::-webkit-scrollbar {
@@ -94,13 +92,9 @@ a {
 	z-index: 2;
 	font-size: 1em;
 	/* display: flex; */
+	scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
 }
-
-#calendar {
-  scrollbar-width: none;  /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-}
-
 
 #calendar::-webkit-scrollbar {
 	display: none;
@@ -130,16 +124,44 @@ a {
 	display: inline-block;
 }
 
-#content {
-	max-height: 100%;
-	overflow-y: auto;
-}
-
 .hoverEffect:hover {
 	color: #ffcc00;
 	cursor: pointer;
 }
 
+#quemSomos {
+	flex: 1;
+	overflow-y: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+	box-sizing: border-box;
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	color: var(--textColor);
+	z-index: 2;
+	font-size: 1.2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	max-height: 100%;
+	scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+#quemSomos::-webkit-scrollbar {
+	display: none;
+}
+
+#quemSomos h2 {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 2em;
+}
+
+#quemSomos li {
+	margin-top: 1em;
+	line-height: 2em;
+}
 
 @media only screen and (max-width: 768px) {
 	#header,
