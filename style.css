@@ -18,6 +18,10 @@ body {
     overflow: hidden;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
 #mainPageBackground {
     height: 100%;
     overflow: hidden;
@@ -28,7 +32,7 @@ body {
 #header, #footer {	
 	display: flex;
 	justify-content: space-around;
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: 'Bebas Neue', sans-serif;	
 	font-size: 2em;
 	background-color: rgb(255, 0, 0, 0.5);
 	color: var(--header-footerTextColor);
@@ -38,7 +42,8 @@ body {
 }
 
 #footer {
-	font-family: 'Urbanist', sans-serif;
+	/* font-family: 'Urbanist', sans-serif; */
+	font-family: 'Josefin Sans', sans-serif;
 	font-size: 1.0em;
 }
 
@@ -59,8 +64,27 @@ body {
 	padding: 20px;
 	box-sizing: border-box;
 	position: relative;
+	font-family: 'Anton', sans-serif;
 	color: var(--textColor);
 	z-index: 2;
+	font-size: 5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#calendar {
+	flex: 1;
+	overflow-y: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+	box-sizing: border-box;
+	position: relative;
+	color: var(--textColor);
+	z-index: 2;
+	font-size: 12px;
+	display: flex;	
 }
 
 #content::-webkit-scrollbar {
