@@ -1,43 +1,13 @@
+// config example for calendar: https://vkurko.github.io/calendar/
+// documentation can be found here: https://github.com/vkurko/calendar#svelte-component--es6-module
+// import { getCalendarData } from './calendarData.js';
+
 document.getElementById("currentYear").innerHTML = new Date().getFullYear();
-// const contentFiller = document.getElementById("content");
+import { getCalendarDataInfo } from './calendarData.js';
 
-
-// for (i = 0; i <= 10; i += 1) {
-//     contentFiller.appendChild(document.createElement("p"));
-//     contentFiller.lastChild.innerHTML = 'Linha :' +i;
-// }
-
-document.addEventListener("DOMContentLoaded", function () {
-	const calendarTarget = document.getElementById("calendar");
-	const calendarPlugin = new FullCalendar.Calendar(calendarTarget, 
-		{
-			eventSources: 
-			[
-				{
-					events: [
-						{
-							title  : 'CASAMENTO CÉLIA',
-							start  : '2023-11-01'
-						},
-						{
-							title  : 'VIAGEM AO SÍTIO',
-							start  : '2023-11-05',
-							end    : '2023-11-08'
-						},
-						{
-							title  : 'ALMOÇO COM OS NOVATOS',
-							start  : '2023-11-09T12:30:00',
-							allDay : false // will make the time show
-						}
-					],
-						color: "red",
-						borderColor: "yellow",
-						textColor: "white",
-						backgroundColor: "rgb(0, 0, 0, 0.5)",
-						initialView: "dayGridMonth",
-						locale: "pt-br",
-				}
-			]
-	});
-	calendarPlugin.render();
+let ec = new EventCalendar(document.getElementById('ec'), {
+	view: 'timeGridWeek',
+	events: getCalendarDataInfo(),
 });
+
+ec.setOption('slotDuration', '00:30');
