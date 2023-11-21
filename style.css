@@ -67,7 +67,7 @@ a {
 	font-family: 'Anton', sans-serif;
 	color: var(--textColor);
 	z-index: 2;
-	font-size: 5em;
+	font-size: 3em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -82,7 +82,32 @@ a {
 }
 
 
-#calendar {
+#contentCalendar {
+	flex: 1;
+	overflow-y: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+	box-sizing: border-box;
+	position: relative;
+	font-family: 'Anton', sans-serif;
+	color: var(--textColor);
+	z-index: 2;
+	font-size: 1em;
+	/* display: flex; */
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-height: 100%;
+	scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
+}
+
+#contentCalendar::-webkit-scrollbar {
+	display: none;
+}
+
+
+#ec0 {
 	flex: 1;
 	overflow-y: hidden;
 	background-color: rgba(0, 0, 0, 0.6);
@@ -90,15 +115,16 @@ a {
 	position: relative;
 	color: var(--textColor);
 	z-index: 2;
-	font-size: 1em;
-	/* display: flex; */
-	scrollbar-width: none;  /* Firefox */
-	-ms-overflow-style: none;  /* IE and Edge */
+	font-size: 1.1em;
+	display: inline-flex;
+	flex-direction: row;
+/*	scrollbar-width: none;  /* Firefox */
+/*	-ms-overflow-style: none;  /* IE and Edge */
 }
 
-#calendar::-webkit-scrollbar {
+/* #ec::-webkit-scrollbar {
 	display: none;
-}
+} */
 
 #mainPageBackground:before {
 	content: "";
@@ -176,7 +202,12 @@ a {
 	}
 
 	#content,
-	#calendar {
+	#eco {
 		font-size: 3em;
 	}
+
+	#quemSomos {
+		font-size: 1em;
+	}
+
 }
