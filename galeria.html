@@ -7,6 +7,7 @@
     <title>Valentes de Davi</title>
 </head>
 <body class="galeria">
+  <div id="mainPageBackground">
     <div id="myNav" class="overlay">
         <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
         
@@ -15,8 +16,6 @@
             <a href="galeria.html">Galeria</a>
             <a href="avisos.html">Avisos</a>
             <a href="contato.html">Doaçoes Contato</a>
-
-            
         </div>
         
     </div>
@@ -25,7 +24,7 @@
     </button>
     <div>
     <div>
-        <header>
+        <header id="header">
             <h1>Os Valentes de Davi</h1>
         </header>
         <h2>Galeria</h2>
@@ -34,7 +33,7 @@
             <img src="" alt="">
         </div>
         <section>
-            <div class="galeria">
+            <div class="galeria-card">
                 <div class="singlo-galeria w-2 h-2">
                     <img src="img/dbv1.jpg" alt="" onclick="abrirGaleria('img/dbv1.jpg')">
                 </div>
@@ -55,8 +54,22 @@
                 </div>
             </div>
         </section>
+      <div id="footer">
+        <div id="leftSideFooter">
+          <p>Localiza&ccedil;&atilde;o: Igreja Central de São Bento.</p>
+          <p>Pastor: Pr. Fabr&iacute;cio Meira.</p>
+          <p>Diretor do clube: Elizeu Sousa</p>
+        </div>
+        <div id="rightSideFooter">
+          <p>Capel&atilde;o: Francisco Maur&iacute;cio</p>
+          <p>Drs. associados: Maria do Livramento e Francisco Diassis</p>
+          <p>2017 - <span id="currentYear"></span></p>
+        </div>
+      </div>
+
     </div>
     
     <script src="script.js"></script>
+  </div>
 </body>
 </html>

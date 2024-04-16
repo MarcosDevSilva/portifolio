@@ -172,3 +172,30 @@ a {
   }
 }
 
+.galeria #mainPageBackground:before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/img/desbravadores_FULL.jpg");
+  filter: brightness(50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.galeria {
+}
+
+.galeria #header {
+  color: white;
+}
+
+.overlay-content {
+  color: white;
+}
