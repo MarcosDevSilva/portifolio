@@ -1,65 +1,65 @@
 :root {
-	--headerTextColor: rgb(243, 214, 0, 0.5);
-	--textColor: rgb(243, 214, 0);
+  --headerTextColor: rgb(243, 214, 0, 0.5);
+  --textColor: rgb(243, 214, 0);
 }
 
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 #mainPageBackground {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-image: url("/img/desbravadores_FULL.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	filter: brightness(50%);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/img/desbravadores_FULL.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
 }
 
-#header, #footer {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	width: 100vw;
-	height: 10vh;
-	border: 1px solid red;
-	position: fixed;
+#header,
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 10vh;
+  border: 1px solid red;
+  position: fixed;
 }
 
-#leftSideFooter, #rightSideFooter {
-	overflow-y: scroll;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 50vw;
-	height: 10vh;
+#leftSideFooter,
+#rightSideFooter {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 10vh;
 }
 
 .hoverEffect:hover {
-	color: var(--textColor);
-	cursor: pointer;
+  color: var(--textColor);
+  cursor: pointer;
 }
 
 #content {
-	overflow-y: scroll;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 100vw;
-	height: 90vh;
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
 }
 
 #content::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
-
-

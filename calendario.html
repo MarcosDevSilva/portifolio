@@ -1,47 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Os Valentes de Davi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script DEFER src="script.js"></script>
-    <script DEFER src="https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js"></script>
-    <script DEFER src="calendarData.js"></script>
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="calendarData.js"></script>
+  </head>
 
-<body>
+  <body>
     <div id="mainPageBackground">
-        <div id="header">
-            <a href="index.html" class="hoverEffect">Home</a>
-            <span class="hoverEffect">Galeria</span>
-            <span class="hoverEffect">Avisos</span>
-            <a href="calendario.html" class="hoverEffect">Calend&Aacute;rio</a>
-            <span class="hoverEffect">Doações / Contato</span>
+      <div id="header">
+        <a href="index.html" class="hoverEffect">Home</a>
+        <span class="hoverEffect">Galeria</span>
+        <span class="hoverEffect">Avisos</span>
+        <a href="calendario.html" class="hoverEffect">Calend&Aacute;rio</a>
+        <span class="hoverEffect">Doações / Contato</span>
+      </div>
+      <div id="calendar"></div>
+      <div id="footer">
+        <div id="leftSideFooter">
+          <p>Localiza&ccedil;&atilde;o: Igreja Central de São Bento.</p>
+          <p>Pastor: Pr. Fabr&iacute;cio Meira.</p>
+          <p>Diretor do clube: Elizeu Sousa</p>
         </div>
-        <div id="calendar">
-
+        <div id="rightSideFooter">
+          <p>Capel&atilde;o: Francisco Maur&iacute;cio</p>
+          <p>Drs. associados: Maria do Livramento e Francisco Diassis</p>
+          <p>2017 - <span id="currentYear"></span></p>
         </div>
-        <div id="footer">
-            <div id="leftSideFooter">
-                <p>Localiza&ccedil;&atilde;o: Igreja Central de São Bento.</p>
-                <p>Pastor: Pr. Fabr&iacute;cio Meira.</p>
-                <p>Diretor do clube: Elizeu Sousa</p>
-            </div>
-            <div id="rightSideFooter">
-                <p>Capel&atilde;o: Francisco Maur&iacute;cio</p>
-                <p>Drs. associados: Maria do Livramento e Francisco Diassis</p>
-                <p>2017 - <span id="currentYear"></span></p>
-            </div>
-        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
+
