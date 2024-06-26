@@ -103,6 +103,16 @@ body {
             border: none;
             border-radius: 0;
         }
+        @media (max-width: 780px ) {
+          .gallery img {
+            width: 150;
+          }
+        }
+        @media (max-width: 480){
+          .gallery img {
+            width: 100px;
+          }
+        }
 
 #content {
   flex: 1;
